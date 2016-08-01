@@ -25,18 +25,13 @@ namespace WebAppChapter5.Controllers
         //a 401 upon receiving unauthenticated requests
         public ActionResult Contact()
         {
-            string userFirstName = ClaimsPrincipal.Current.FindFirst(ClaimTypes.GivenName).Value;
-            ViewBag.Message = string.Format("Welcome, {0}!", userFirstName);
+            string userfirstname = ClaimsPrincipal.Current.FindFirst(ClaimTypes.GivenName).Value;
+            ViewBag.Message = string.Format("Welcome, {0}!", userfirstname);
 
             return View();
         }
 
-        public void SignOut()
-        {
-            HttpContext.GetOwinContext().Authentication.SignOut(
-                OpenIdConnectAuthenticationDefaults.AuthenticationType,
-                CookieAuthenticationDefaults.AuthenticationType);
-        }
+
     }
 
 }

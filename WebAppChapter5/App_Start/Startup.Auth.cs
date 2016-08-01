@@ -15,20 +15,17 @@ namespace WebAppChapter5
             //adds an instance of the cookie middleware in the pipeline
             app.UseCookieAuthentication(new CookieAuthenticationOptions());
             //adds an instance of the OpenID Connect middleware in the pipeline
-            app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
-            {
-                ClientId = "06be8f72-af78-41dc-bd01-3790f85ee2ab",
-                Authority = "https://login.microsoftonline.com/DeveloperTenant.onmicrosoft.com/",
-            }
+            app.UseOpenIdConnectAuthentication(
+                new OpenIdConnectAuthenticationOptions
+                {
+                    ClientId = "06be8f72-af78-41dc-bd01-3790f85ee2ab",
+                    Authority = "https://login.microsoftonline.com/DeveloperTenant.onmicrosoft.com",
+                    PostLogoutRedirectUri = "https://localhost:44322/"
+                }
                 );
-            new OpenIdConnectAuthenticationOptions
-            {
-                ClientId = "06be8f72-af78-41dc-bd01-3790f85ee2ab",
-                Authority = "https://login.microsoftonline.com/DeveloperTenant.onmicrosoft.com/",
-                PostLogoutRedirectUri = "https://localhost:44322/"
-            };
         }
+
+        //https://login.microsoftonline.com/DeveloperTenant.onmicrosoft.com/
+
     }
-
-
 }
