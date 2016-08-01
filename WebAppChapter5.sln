@@ -8,8 +8,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{21EF0DCE-647A-4BB8-B881-559AF5FFC679}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{93D3D25B-AC4F-4BF6-834A-1575267217D0}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\ConfigureWebServer.ps1 = PublishScripts\Scripts\ConfigureWebServer.ps1
+		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{CFD935B1-FB82-4356-B070-467172FD4613}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\WebAppChapter5.json = PublishScripts\Templates\WebAppChapter5.json
+		PublishScripts\Templates\WebAppChapter5.param.dev.json = PublishScripts\Templates\WebAppChapter5.param.dev.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
